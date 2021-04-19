@@ -5,7 +5,7 @@ description = ""
 authors = ["Eduardo <e.git@xor.cl>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
 Django = "^3.2"
 django-mama-cas = "^2.5.0"
 
