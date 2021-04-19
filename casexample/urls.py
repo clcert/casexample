@@ -22,5 +22,4 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'', include('mama_cas.urls')),
-    static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-]
+] +     static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
