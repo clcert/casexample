@@ -20,6 +20,7 @@ from django.conf.urls import url
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    url(r'', include('mama_cas.urls')),
-] +     static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path("admin/", admin.site.urls),
+    url(r"", include("mama_cas.urls")),
+    path("oauth/", include("oauth2_provider.urls", namespace="oauth2_provider")),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

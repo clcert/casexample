@@ -1,2 +1,4 @@
 django
 django-mama-cas
+django-oauth-toolkit
+django-cors-headers
