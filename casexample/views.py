@@ -6,4 +6,5 @@ import json
 
 class ApiEndpoint(ProtectedResourceView):
     def get(self, request, *args, **kwargs):
-        return serializers.serialize("json", request.user)
+        self.head
+        return serializers.serialize("json", [request.user])[1:-1]
