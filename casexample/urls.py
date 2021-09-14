@@ -18,9 +18,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls import url
 from django.conf.urls.static import static
+from .views import ApiEndpoint
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     url(r"", include("mama_cas.urls")),
     path("oauth/", include("oauth2_provider.urls", namespace="oauth2_provider")),
+    path("api/me", ApiEndpoint.as_view()),  # an example resource endpoint
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
