@@ -45,8 +45,16 @@ INSTALLED_APPS = [
     "corsheaders",
 ]
 
+AUTHENTICATION_BACKENDS = (
+    "oauth2_provider.backends.OAuth2Backend",
+    # Uncomment following if you want to access the admin
+    "django.contrib.auth.backends.ModelBackend",
+)
+
+
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
+    "oauth2_provider.middleware.OAuth2TokenMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
